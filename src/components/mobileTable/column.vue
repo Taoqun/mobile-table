@@ -1,6 +1,9 @@
 <template>
   <td class="com-td">
-    <div :class="['com-td-wrap', props.align]">
+    <div
+      :class="['com-td-wrap', props.align]"
+      :style="{ width: props.width + 'px' }"
+    >
       <slot name="default" :row="item">
         {{ renderItem() }}
       </slot>
@@ -9,7 +12,7 @@
 </template>
 <script setup>
 import { inject } from "vue";
-const props = defineProps(["name", "prop", "align"]);
+const props = defineProps(["name", "prop", "width", "align"]);
 const item = inject("item");
 
 function renderItem() {
@@ -18,6 +21,7 @@ function renderItem() {
 </script>
 <style lang="scss" scoped>
 .com-td {
+  flex-shrink: 0;
   border-style: none;
   font-size: 14px;
   color: #333333;
@@ -27,7 +31,7 @@ function renderItem() {
   align-items: center;
   justify-content: flex-start;
   min-height: 45px;
-  padding: 0 5px;
+  padding: 0 10px;
   font-size: 14px;
   color: #333333;
   line-height: 1.1;

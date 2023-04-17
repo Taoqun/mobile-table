@@ -229,11 +229,12 @@ function onPageChange(index) {
   background: #f6fafd;
 }
 .com-table-th {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 45px;
-  padding: 0 5px;
+  padding: 0 10px;
   font-size: 14px;
   line-height: 1;
   color: #666666;
