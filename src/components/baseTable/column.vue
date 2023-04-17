@@ -19,7 +19,6 @@ function renderItem() {
 <style lang="scss" scoped>
 .com-td {
   border-style: none;
-  min-height: 45px;
   font-size: 14px;
   color: #333333;
 }
@@ -27,10 +26,11 @@ function renderItem() {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  min-height: 45px;
   padding: 0 5px;
   font-size: 14px;
   color: #333333;
-  line-height: 16px;
+  line-height: 1.1;
 
   &.left {
     justify-content: flex-start;
