@@ -53,9 +53,9 @@
       </div>
       <Paging
         v-if="props.paging"
-        :index="props.index"
-        :total="props.total"
-        @change="pageChangeHandler"
+        :pageIndex="props.pageIndex"
+        :pageTotal="props.pageTotal"
+        @change="onPageChange"
       />
     </div>
   </div>
@@ -82,8 +82,8 @@ const props = defineProps([
   "sortKey",
   "sortType",
   "paging",
-  "index",
-  "total",
+  "pageIndex",
+  "pageTotal",
 ]);
 const emits = defineEmits(["changeSort", "pageChange"]);
 const tableScroll = ref("");
@@ -135,7 +135,7 @@ function initTableWidth() {
   if (tableScroll.value) {
     const thlist = tableScroll.value.querySelectorAll(".com-table-th span");
     thlist.forEach((dom) => {
-      width += dom.offsetWidth + 20;
+      width += dom.offsetWidth + 15;
     });
   }
   tableWidth.value = width;
@@ -148,10 +148,12 @@ function changeSort(item) {
     return;
   }
   let key = props.sortKey || "";
-  let type = props.sortType || 1;
+  let type = props.sortType || 0;
   if (key === item.prop) {
     if (type === 1) {
       type = -1;
+    } else if (type === -1) {
+      type = 0;
     } else {
       type = 1;
     }
@@ -159,7 +161,10 @@ function changeSort(item) {
     key = item.prop;
     type = 1;
   }
-  emits("changeSort", {
+  if (type === 0) {
+    key = "";
+  }
+  emits("sortChange", {
     sortKey: key,
     sortType: type,
   });
@@ -182,10 +187,10 @@ watch(
 onBeforeMount(() => {
   init();
 });
-
-const pageChangeHandler = (opt) => {
-  emits("pageChange", opt);
-};
+// 翻页
+function onPageChange(index) {
+  emits("pageChange", index);
+}
 </script>
 <style lang="scss" scoped>
 .com-base-table {

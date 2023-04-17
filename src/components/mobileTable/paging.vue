@@ -4,42 +4,57 @@
       :class="{
         'com-paging-item': true,
         turner: true,
-        disabled: (props.index || 1) <= 1,
+        disabled: props.pageIndex <= 1,
       }"
-      @click="props.index > 1 && emits('change', props.index - 1)"
+      :data-num="props.pageIndex"
+      @click="prePage"
     >
       上一页
     </div>
     <div class="com-paging-item page">
-      <span class="com-paging-current">{{ props.index || "1" }}</span>
+      <span class="com-paging-current">{{ props.pageIndex || "1" }}</span>
       <span class="com-paging-gap">/</span>
-      <span>{{ props.total || "0" }}</span>
+      <span>{{ props.pageTotal || "0" }}</span>
     </div>
     <div
       :class="{
         'com-paging-item': true,
         turner: true,
-        disabled: (props.index || 1) >= props.total / (props.size || 20),
+        disabled: props.pageIndex >= props.pageTotal,
       }"
-      @click="
-        props.index < (props.total || 0) && emits('change', props.index + 1)
-      "
+      @click="nextPage"
     >
       下一页
     </div>
   </div>
 </template>
 <script setup>
-const props = defineProps(["index", "size", "total"]);
+const props = defineProps(["pageIndex", "pageTotal"]);
 const emits = defineEmits(["change"]);
+
+// 上一页
+function prePage() {
+  if (props.pageIndex <= 1) {
+    return;
+  }
+  emits("change", props.pageIndex - 1);
+}
+
+// 下一页
+function nextPage() {
+  if (props.pageIndex >= props.pageTotal) {
+    return;
+  }
+  emits("change", props.pageIndex + 1);
+}
 </script>
 <style lang="scss" scoped>
 .com-paging {
-  height: 74px;
+  height: 40px;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  font-size: 26px;
+  font-size: 14px;
   color: #1974ff;
   line-height: 1;
 }
@@ -50,24 +65,24 @@ const emits = defineEmits(["change"]);
     color: #999999ff;
   }
   &.turner {
-    padding: 0 12px;
+    padding: 0 5px;
     transition: all 0.2s linear;
 
     &:hover {
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
   &.disabled {
     cursor: not-allowed;
-    color: #999999ff;
+    color: #999999;
   }
 }
 .com-paging-current {
   color: #2163ffff;
-  font-size: 26px;
+  font-size: 14px;
   font-weight: 500;
 }
 .com-paging-gap {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 </style>
