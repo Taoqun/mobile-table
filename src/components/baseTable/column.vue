@@ -19,7 +19,7 @@ function renderItem() {
 <style lang="scss" scoped>
 .com-td {
   border-style: none;
-  height: 45px;
+  min-height: 45px;
   font-size: 14px;
   color: #333333;
 }
