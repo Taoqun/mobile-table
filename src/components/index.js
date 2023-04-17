@@ -1,13 +1,10 @@
-import baseTable from "./baseTable/table.vue";
-import baseTableColumn from "./baseTable/column.vue";
-import baseEmpty from "./baseTable/empty.vue";
+import mobileTable from "./mobileTable/table.vue";
+import mobileTableColumn from "./mobileTable/column.vue";
 
-export const BaseTable = baseTable;
-export const BaseTableColumn = baseTableColumn;
-export const BaseEmpty = baseEmpty;
+export const MobileTable = mobileTable;
+export const MobileTableColumn = mobileTableColumn;
 
 export default {
-  BaseTable,
-  BaseTableColumn,
-  BaseEmpty,
+  MobileTable,
+  MobileTableColumn,
 };

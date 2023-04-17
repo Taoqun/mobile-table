@@ -1,9 +1,9 @@
 <template>
   <div>
     <BaseTable :data="data">
-      <BaseTableColumn name="名称" :sort="true" prop="name" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
+      <BaseTableColumn name="姓名" prop="name" />
+      <BaseTableColumn name="年龄" prop="age" :sort="true" />
+      <BaseTableColumn name="性别" prop="sex" />
     </BaseTable>
   </div>
 </template>
