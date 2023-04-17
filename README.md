@@ -1,5 +1,7 @@
 #### mobile-table 适用于移动端表格
 
+> 基于`vue3`开发的移动端`table`表格组件
+
 ##### 安装
 
 ```
@@ -9,6 +11,14 @@ npm i mobile-table
 
 yarn add mobile-table
 ```
+
+#### 预览
+
+> 预览图片
+> ![基本图片](https://cdn.taoquns.com/screenshot-20230417-150344.png)
+
+> 预览视频
+> <video src="https://cdn.taoquns.com/20230417-153114.mp4" controls></video>
 
 ##### 基本用法
 
@@ -130,14 +140,14 @@ function onPageChange(index) {
 
 ##### MobileTable 属性说明
 
-| 属性名    | 说明       | 类型    | 默认值 | 说明   |
-| --------- | ---------- | ------- | ------ | ------ |
-| data      | table 数据 | Array   | Array  | 空数组 |
-| sortKey   | 排序字段   | string  | ''     |        |
-| sortType  | 排序类型   | number  | 0      |        |
-| paging    | 是开启分页 | boolean | false  |        |
-| pageIndex | 分页索引   | number  | 1      |        |
-| pageTotal | 总分页数   | number  | 1      |        |
+| 属性名    | 说明       | 类型    | 默认值 | 说明 |
+| --------- | ---------- | ------- | ------ | ---- |
+| data      | table 数据 | Array   | Array  |      |
+| sortKey   | 排序字段   | string  | ''     |      |
+| sortType  | 排序类型   | number  | 0      |      |
+| paging    | 是开启分页 | boolean | false  |      |
+| pageIndex | 分页索引   | number  | 1      |      |
+| pageTotal | 总分页数   | number  | 1      |      |
 
 ##### MobileTable 事件说明
 
