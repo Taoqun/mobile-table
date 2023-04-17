@@ -1,7 +1,21 @@
 {
   "name": "mobile-table",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
+  "main": "./lib/index.es.js",
+  "author": "taoqun",
+  "description": "移动端表格组件",
+  "keywords": [
+    "表格",
+    "表格组件",
+    "移动端",
+    "table",
+    "mobile-table"
+  ],
+  "license": "ISC",
+  "files": [
+    "lib"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +23,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.62.0",
+    "scss": "^0.2.4",
     "vue": "^3.2.47"
   },
   "devDependencies": {
