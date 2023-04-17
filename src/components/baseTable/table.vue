@@ -48,7 +48,7 @@
           </tbody>
         </table>
         <div v-if="!props.data?.length" class="com-base-empty">
-          <div>暂无数据</div>
+          <Empty />
         </div>
       </div>
       <Paging
@@ -64,6 +64,7 @@
 import { ref, useSlots, watch, nextTick, onBeforeMount } from "vue";
 import Paging from "./paging.vue";
 import RowItem from "./rowItem.vue";
+import Empty from "./empty.vue";
 import ArrowUp from "@/images/narrow_up.png";
 import ArrowDown from "@/images/narrow_down.png";
 import ArrowUpActive from "@/images/narrow_up_active.png";
