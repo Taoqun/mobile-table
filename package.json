@@ -1,7 +1,7 @@
 {
   "name": "mobile-table",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.umd.js",
   "author": "taoqun",
   "description": "移动端表格组件",
