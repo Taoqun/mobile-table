@@ -23,9 +23,9 @@ import "mobile-table/lib/style.css";
 
 #### 预览
 
-![预览图片](https://cdn.taoquns.com/screenshot-20230417-150344.png)
+![预览图片](https://cdn.taoquns.com/screenshot-20230417-160458.png)
 
-![预览操作](https://cdn.taoquns.com/20230417-153114.gif)
+![预览操作](https://cdn.taoquns.com/20230417-160609.gif)
 
 ##### MobileTable 属性说明
 
