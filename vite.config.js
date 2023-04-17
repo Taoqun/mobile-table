@@ -18,6 +18,7 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  // 打包配置
   build: {
     outDir: "dist", //输出文件名称
     lib: {
