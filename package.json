@@ -17,6 +17,10 @@
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taoqun/mobile-table.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
