@@ -26,10 +26,12 @@
     "normalize.css": "^8.0.1",
     "sass": "^1.62.0",
     "scss": "^0.2.4",
+    "vant": "^4.2.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "unplugin-vue-components": "^0.24.1",
     "vite": "^4.2.0"
   }
 }

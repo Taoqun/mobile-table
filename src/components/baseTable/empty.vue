@@ -1,7 +1,6 @@
 <template>
   <div class="com-empty">
-    <div></div>
-    <div>{{ props.text || "暂无数据" }}</div>
+    <van-empty image-size="100" :description="props.text || '暂无数据'" />
   </div>
 </template>
 <script setup>

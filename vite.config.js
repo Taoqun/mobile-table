@@ -2,10 +2,17 @@ import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
 import path from "path";
 import vue from "@vitejs/plugin-vue";
+import Components from "unplugin-vue-components/vite";
+import { VantResolver } from "unplugin-vue-components/resolvers";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [VantResolver()],
+    }),
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -16,7 +23,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "./src/components/index.js"), //指定组件编译入口文件
       name: "mobile-table",
-      formats: ["es", "umd"],
+      formats: ["umd"],
       fileName: (format, entryName) => {
         return `${entryName}.${format}.js`;
       },

@@ -4,18 +4,6 @@
       <BaseTableColumn name="名称" :sort="true" prop="name" />
       <BaseTableColumn name="数据" prop="value" />
       <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
-      <BaseTableColumn name="数据" prop="value" />
     </BaseTable>
   </div>
 </template>
@@ -24,29 +12,7 @@
 import { BaseTable, BaseTableColumn } from "@/components/";
 import { ref } from "vue";
 
-const data = ref([
-  {
-    name: "aaa",
-    value: 111,
-  },
-  {
-    name: "bbb",
-    value: 111,
-  },
-  {
-    name: "ccc",
-    value: 111,
-  },
-
-  {
-    name: "ddd",
-    value: 111,
-  },
-  {
-    name: "eeee",
-    value: 111,
-  },
-]);
+const data = ref([]);
 </script>
 
 <style scoped></style>

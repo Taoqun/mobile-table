@@ -166,7 +166,14 @@ function changeSort(item) {
 
 watch(
   () => props.data,
-  (val, oldVal) => {
+  () => {
+    init();
+  }
+);
+
+watch(
+  () => slots,
+  () => {
     init();
   }
 );
@@ -181,9 +188,9 @@ const pageChangeHandler = (opt) => {
 </script>
 <style lang="scss" scoped>
 .com-base-table {
-  background: #ffffff;
   overflow: hidden;
   border-radius: 0;
+  background: #ffffff;
 }
 .com-table-wrap {
   width: 100%;
