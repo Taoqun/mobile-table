@@ -20,7 +20,7 @@ export default defineConfig({
   },
   // 打包配置
   build: {
-    outDir: "dist", //输出文件名称
+    outDir: "lib", //输出文件名称
     lib: {
       entry: path.resolve(__dirname, "./src/components/index.js"), //指定组件编译入口文件
       name: "mobile-table",

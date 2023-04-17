@@ -1,7 +1,7 @@
 {
   "name": "mobile-table",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.umd.js",
   "author": "taoqun",
   "description": "移动端表格组件",
@@ -14,7 +14,7 @@
   ],
   "license": "ISC",
   "files": [
-    "dist",
+    "lib",
     "README.md"
   ],
   "repository": {
@@ -28,6 +28,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "mobile-table": "^0.0.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.62.0",
     "scss": "^0.2.4",

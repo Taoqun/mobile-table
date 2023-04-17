@@ -12,6 +12,15 @@ npm i mobile-table
 yarn add mobile-table
 ```
 
+##### 使用
+
+```
+// 导入组件
+import { MobileTable, MobileTableColumn } from "mobile-table";
+// 导入样式
+import "mobile-table/lib/style.css";
+```
+
 #### 预览
 
 > 预览图片
@@ -38,6 +47,7 @@ yarn add mobile-table
 <script setup>
 // 引入组件
 import { MobileTable, MobileTableColumn } from "mobile-table";
+import "mobile-table/lib/style.css";
 import { ref } from "vue";
 
 // 表格数据
@@ -90,7 +100,8 @@ const data = ref([
 </template>
 
 <script setup>
-import { MobileTable, MobileTableColumn } from "@/components/";
+import { MobileTable, MobileTableColumn } from "mobile-table";
+import "mobile-table/lib/style.css";
 import { ref } from "vue";
 
 // 表格数据

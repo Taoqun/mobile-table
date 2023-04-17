@@ -28,7 +28,8 @@
 </template>
 
 <script setup>
-import { MobileTable, MobileTableColumn } from "@/components/";
+import { MobileTable, MobileTableColumn } from "mobile-table";
+import "mobile-table/dist/style.css";
 import { ref } from "vue";
 
 // 表格数据
