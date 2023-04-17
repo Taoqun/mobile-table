@@ -27,7 +27,7 @@ yarn add mobile-table
 
 <script setup>
 // 引入组件
-import { MobileTable, MobileTableColumn } from "@/components/";
+import { MobileTable, MobileTableColumn } from "mobile-table";
 import { ref } from "vue";
 
 // 表格数据
@@ -145,3 +145,13 @@ function onPageChange(index) {
 | ---------- | ----------------------- | -------- | ---------------------------------------------- |
 | sortChange | 排序字段和排序方法 变化 | Function | ({ sortKey: string, sortType: number })=> void |
 | pageChange | pageIndex 分页变化      | Function | (index: number)=> void                         |
+
+#### MobileTableColumn 属性说明
+
+| 属性名 | 说明               | 类型    | 默认值 | 说明                    |
+| ------ | ------------------ | ------- | ------ | ----------------------- |
+| label  | 对应列名称         | string  | ''     |                         |
+| prop   | 对应列字段         | string  | ''     |                         |
+| width  | 对应列的宽度       | number  | auto   |                         |
+| sort   | 对应列是否开启排序 | boolean | false  |                         |
+| align  | 对应列的对齐方式   | string  | left   | `left` `center` `right` |

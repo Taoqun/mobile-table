@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import { inject } from "vue";
-const props = defineProps(["name", "prop", "width", "align"]);
+const props = defineProps(["label", "prop", "sort", "width", "align"]);
 const item = inject("item");
 
 function renderItem() {

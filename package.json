@@ -14,7 +14,8 @@
   ],
   "license": "ISC",
   "files": [
-    "lib"
+    "dist",
+    "README.md"
   ],
   "type": "module",
   "scripts": {
