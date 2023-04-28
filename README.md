@@ -1,6 +1,7 @@
 #### mobile-table 适用于移动端表格
 
 > 基于`vue3`开发的移动端`table`表格组件
+> git: https://github.com/Taoqun/mobile-table
 
 ##### 安装
 
@@ -53,6 +54,7 @@ import "mobile-table/lib/style.css";
 | prop   | 对应列字段         | string  | ''     |                         |
 | width  | 对应列的宽度       | number  | auto   |                         |
 | sort   | 对应列是否开启排序 | boolean | false  |                         |
+| fixed  | 对应列是否开启吸顶 | boolean | false  |                         |
 | align  | 对应列的对齐方式   | string  | left   | `left` `center` `right` |
 
 ##### 基本用法
