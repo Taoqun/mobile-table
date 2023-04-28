@@ -9,9 +9,9 @@
     @sortChange="onSortChange"
     @pageChange="onPageChange"
   >
-    <MobileTableColumn name="姓名" prop="name" width="60" />
+    <MobileTableColumn name="姓名" :fixed="true" prop="name" width="60" />
     <MobileTableColumn name="年龄" prop="age" :sort="true" />
-    <MobileTableColumn name="性别" prop="sex">
+    <MobileTableColumn name="性别" :fixed="true" prop="sex">
       <template #default="scope">
         <div>{{ scope.row.sex === 1 ? "男" : "女" }}</div>
       </template>
@@ -28,7 +28,8 @@
 </template>
 
 <script setup>
-import { MobileTable, MobileTableColumn } from "mobile-table";
+// import { MobileTable, MobileTableColumn } from "mobile-table";
+import { MobileTable, MobileTableColumn } from "./components/index";
 import "mobile-table/dist/style.css";
 import { ref } from "vue";
 

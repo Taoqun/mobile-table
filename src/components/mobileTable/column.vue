@@ -1,5 +1,5 @@
 <template>
-  <td class="com-td">
+  <td :class="{ 'com-td': true, fixed: props.fixed }">
     <div
       :class="['com-td-wrap', props.align]"
       :style="{ width: props.width + 'px' }"
@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import { inject } from "vue";
-const props = defineProps(["label", "prop", "sort", "width", "align"]);
+const props = defineProps(["label", "prop", "sort", "width", "align", "fixed"]);
 const item = inject("item");
 
 function renderItem() {
@@ -25,6 +25,12 @@ function renderItem() {
   border-style: none;
   font-size: 14px;
   color: #333333;
+
+  &.fixed {
+    position: sticky;
+    left: 0;
+    background: #fff;
+  }
 }
 .com-td-wrap {
   display: flex;

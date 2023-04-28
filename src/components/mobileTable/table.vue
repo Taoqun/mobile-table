@@ -7,36 +7,7 @@
           :border="0"
           :style="{ width: `${tableWidth}px` }"
         >
-          <thead class="com-table-thead">
-            <th
-              v-for="(th, index) in thead"
-              :key="`${th.name}-${th.prop}-${index}`"
-            >
-              <div :class="['com-table-th', th.align]" @click="changeSort(th)">
-                <span>
-                  {{ th.name }}
-                </span>
-                <div v-if="th.sort" class="com-th-sort">
-                  <img
-                    class="com-sort-icon"
-                    :src="
-                      props.sortKey === th.prop && props.sortType === 1
-                        ? ArrowUpActive
-                        : ArrowUp
-                    "
-                  />
-                  <img
-                    class="com-sort-icon down"
-                    :src="
-                      props.sortKey === th.prop && props.sortType === -1
-                        ? ArrrowDownActive
-                        : ArrowDown
-                    "
-                  />
-                </div>
-              </div>
-            </th>
-          </thead>
+          <TableHead :list="thead" @changeSort="changeSort" />
           <tbody>
             <RowItem
               v-for="(item, index) in props.data"
@@ -65,10 +36,7 @@ import { ref, useSlots, watch, nextTick, onBeforeMount } from "vue";
 import Paging from "./paging.vue";
 import RowItem from "./rowItem.vue";
 import Empty from "./empty.vue";
-import ArrowUp from "@/images/narrow_up.png";
-import ArrowDown from "@/images/narrow_down.png";
-import ArrowUpActive from "@/images/narrow_up_active.png";
-import ArrrowDownActive from "@/images/narrow_down_active.png";
+import TableHead from "./head.vue";
 
 /**
  * data 表格数据列表
@@ -220,49 +188,8 @@ function onPageChange(index) {
   min-width: 100%;
   border: none;
   border-collapse: collapse;
-
   span {
     flex-shrink: 0;
-  }
-}
-.com-table-thead {
-  background: #f6fafd;
-}
-.com-table-th {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 45px;
-  padding: 0 10px;
-  font-size: 14px;
-  line-height: 1;
-  color: #666666;
-
-  &.left {
-    justify-content: flex-start;
-  }
-  &.center {
-    justify-content: center;
-  }
-  &.right {
-    justify-content: flex-end;
-  }
-}
-.com-th-sort {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-}
-.com-sort-icon {
-  width: 7px;
-  height: 5px;
-
-  &.down {
-    margin-top: 2px;
   }
 }
 </style>
